@@ -1,0 +1,132 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import HTML from "./icons/Html.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import CSS from "./icons/CSS.astro";
+import JS from "./icons/JavaScript.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import Astroi from "./icons/Astroi.astro";
+import Svelte from "./icons/Svelte.astro";
+import React from "./icons/React.astro";
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: HTML,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: CSS,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: Tailwind,
+    },
+
+    JS: {
+        name: "JavaScript",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: JS,
+    },
+
+    ASTROI: {
+        name: "Astro",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: Astroi,
+    },
+
+    SVELTE: {
+        name: "Svelte",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: Svelte,
+    },
+
+    REACT: {
+        name: "React",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: React,
+    },
+};
+const PROJECTS = [
+    {
+        title: "Clon de la Mac Mini M1",
+        description:
+            "Pagina de la Mac Mini M1 de Apple, moderna, sencilla y minimalista. La web fue hecha con HTML, CSS Y JavaScript, con un diseño moderno y lindas animaciones hechas en CSS  sin ninguna libreria. ",
+        link: "https://clonmacmini.vercel.app/",
+        github: "https://github.com/angelurrutdev/Clon-macmini-M1",
+        image: "/projects/MacMiniM1.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
+    },
+
+    {
+        title: "Spotify Clon Transitions",
+        description:
+            "Aplicación web de Spotify utilizando la API de View Transitions para mejorar la experiencia de navegación entre las páginas de la aplicación, logrando una transición fluida y agradable para el usuario. La aplicación cuenta con un reproductor de música que permanece activo incluso al cambiar de página.",
+        link: "https://spotify-clone-transitions.vercel.app/",
+        github: "https://github.com/angelurrutdev/spotify-clone-transitions",
+        image: "/projects/SpotifyCloneTransitions.webp",
+        tags: [TAGS.ASTROI, TAGS.SVELTE, TAGS.REACT, TAGS.TAILWIND],
+    },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(({ image, title, description, tags, link, github }) => (
+            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                        <img
+                            alt="Recién llegado vs 5 años en Nueva Zelanda"
+                            class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                            loading="lazy"
+                            src={image}
+                        />
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 md:max-w-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        {title}
+                    </h3>
+                    <div class="flex flex-wrap mt-2">
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            {tags.map((tag) => (
+                                <li>
+                                    <span
+                                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                                    >
+                                        <tag.icon class="size-4" />
+                                        {tag.name}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <div class="mt-2 text-gray-700 dark:text-gray-400">
+                            {description}
+                        </div>
+                        <footer class="flex items-center justify-center mt-4 ">
+                            {github && (
+                                <LinkButton href={github}>
+                                    <GitHub class="size-6" />
+                                    Codigo
+                                </LinkButton>
+                            )}
+                            {link && (
+                                <LinkButton href={link}>
+                                    <Link class="size-4" />
+                                    Website
+                                </LinkButton>
+                            )}
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        ))
+    }
+</div>

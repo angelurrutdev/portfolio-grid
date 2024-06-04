@@ -1,0 +1,217 @@
+---
+import ArrowUp from "./icons/ArrowUp.astro";
+import HTML from "./icons/Html.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import CSS from "./icons/CSS.astro";
+import JS from "./icons/JavaScript.astro";
+import Astroi from "./icons/Astroi.astro";
+import Svelte from "./icons/Svelte.astro";
+import React from "./icons/React.astro";
+import GitHub from "./icons/GitHub.astro";
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: HTML,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: CSS,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: Tailwind,
+    },
+
+    JS: {
+        name: "JavaScript",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: JS,
+    },
+
+    ASTROI: {
+        name: "Astro",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: Astroi,
+    },
+
+    SVELTE: {
+        name: "Svelte",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: Svelte,
+    },
+
+    REACT: {
+        name: "React",
+        class: "bg-[#191d2d] text-white font-semibold",
+        icon: React,
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Clon de la Mac Mini M1",
+        description:
+            "Mac Mini M1, con un diseño moderno y minimalista con lindas animaciones hechas en CSS  sin ninguna libreria. ",
+        link: "https://clonmacmini.vercel.app/",
+        github: "https://github.com/angelurrutdev/Clon-macmini-M1",
+        image: "./projects/MacMiniM1.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
+    },
+
+    {
+        title: "Spotify Clon Transitions",
+        description:
+            "Spotify Clon utilizando la API de View Transitions cuenta con un reproductor de música que permanece activo al cambiar de página.",
+        link: "https://spotify-clone-transitions.vercel.app/",
+        github: "https://github.com/angelurrutdev/spotify-clone-transitions",
+        image: "/projects/SpotifyCloneTransitions.webp",
+        tags: [TAGS.ASTROI, TAGS.SVELTE, TAGS.REACT, TAGS.TAILWIND],
+    },
+];
+
+const PROJECTSTWO = [
+    {
+        title: "Spotify Clon Transitions",
+        description:
+            "Spotify Clon utilizando la API de View Transitions cuenta con un reproductor de música que permanece activo al cambiar de página.",
+        link: "https://spotify-clone-transitions.vercel.app/",
+        github: "https://github.com/angelurrutdev/spotify-clone-transitions",
+        image: "/projects/SpotifyCloneTransitions.webp",
+        tags: [TAGS.ASTROI, TAGS.SVELTE, TAGS.REACT, TAGS.TAILWIND],
+    },
+];
+---
+
+<section
+    class="w-full grid auto-rows-[490px] lg:auto-rows-[138px] grid-cols-8 gap-4"
+>
+    {
+        PROJECTS.map(({ image, title, description, tags, link, github }) => (
+            <div class="relative flex flex-col rounded-3xl bg-white p-6 gap-3 border-2 border-transparent overflow-hidden row-span-1 gap-x-5 col-span-8 dark:bg-raisin-black lg:p-8 lg:row-span-3 xl:col-span-4 ">
+                <div class="flex flex-col  hover:ease-in-out transition duration-500 ease-in-out">
+                    <div class="opacity-50  ">
+                        <a
+                            class="p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-6 lg:top-5 lg:right-8 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 "
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer"
+                            title="Link del Proyecto"
+                        >
+                            <ArrowUp />
+                        </a>
+
+                        <a
+                            class="p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-20 lg:top-5 lg:right-20 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 "
+                            href={github}
+                            target="_blank"
+                            rel="noreferrer"
+                            title="Github Del Proyecto"
+                        >
+                            <GitHub />
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-1 ">
+                        <h3 class="text-2xl font-bold mt-12 lg:mt-0">
+                            {title}
+                        </h3>
+
+                        <p class="text-base opacity-70">{description}</p>
+
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            <ul class="flex flex-row mb-2 gap-x-2">
+                                {tags.map((tag) => (
+                                    <li>
+                                        <span
+                                            class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 `}
+                                        >
+                                            <tag.icon class="size-4" />
+                                            {tag.name}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="hover:scale-110 transition duration-500">
+                        <a href={link}>
+                            <img
+                                class="object-cover object-top w-full h-56  sm:h-full md:group-hover:scale-105 rounded-lg"
+                                src={image}
+                                loading="lazy"
+                                alt="Imagen del Proyecto"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+
+    {
+        PROJECTSTWO.map(({ image, title, description, tags, link, github }) => (
+            <div class="relative flex flex-col rounded-3xl bg-white p-6  border-2 border-transparent overflow-hidden row-span-1 col-span-8 dark:bg-raisin-black lg:p-8 lg:row-span-2 xl:col-span-4">
+                <div class="flex flex-col hover:ease-in-out transition duration-500 ease-in-out">
+                    <div class="opacity-50 ">
+                        <a
+                            class="p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-6 lg:top-5 lg:right-8 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 "
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer"
+                            title="Link del Proyecto"
+                        >
+                            <ArrowUp />
+                        </a>
+
+                        <a
+                            class="p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-20 lg:top-5 lg:right-20 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 "
+                            href={github}
+                            target="_blank"
+                            rel="noreferrer"
+                            title="Github del Proyecto"
+                        >
+                            <GitHub />
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-1 ">
+                        <h3 class="text-2xl font-bold mt-12 lg:mt-0">
+                            {title}
+                        </h3>
+
+                        <p class="text-base opacity-70">{description}</p>
+
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            <ul class="flex flex-row mb-2 gap-x-2">
+                                {tags.map((tag) => (
+                                    <li>
+                                        <span
+                                            class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 `}
+                                        >
+                                            <tag.icon class="size-4" />
+                                            {tag.name}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="hover:scale-110 transition duration-500">
+                        <a href={link}>
+                            <img
+                                class="object-cover object-top w-full h-56  sm:h-full md:group-hover:scale-105 rounded-lg"
+                                src={image}
+                                loading="lazy"
+                                alt="Imagen del Proyecto"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+</section>
