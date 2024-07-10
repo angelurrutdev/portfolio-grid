@@ -1,0 +1,43 @@
+---
+import EmailIcon from "./icons/Email.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import WhatsappIcon from "./icons/Whatsapp.astro";
+import SocialPill from "./SocialPill.astro";
+---
+
+<div
+    class="inline-flex flex-wrap items-start justify-start pl-4 md:pl-12 rounded-3xl py-12 bg-white dark:bg-raisin-black gap-x-2 text-sm font-medium text-gray-50 backdrop-blur-3xl border-dusky dark:border-white border"
+>
+    <div class="w-full md:w-1/2">
+        <h2
+            class="dark:text-white text-dusky font-bold md:text-4xl text-5xl my-8 md:my-0"
+        >
+            ¿Tienes algún proyecto?
+        </h2>
+        <p class="mt-4 text-4xl dark:text-white text-dusky-alt font-light">
+            Trabajemos juntos
+        </p>
+    </div>
+    <div
+        class="flex flex-wrap md:flex-row flex-col items-center justify-center m-auto gap-3 md:mt-8 mt-12 sm:mt-8"
+    >
+        <SocialPill
+            target="_blank"
+            href="https://www.linkedin.com/in/angelurrutdev/"
+        >
+            <LinkedInIcon class="size-8" />
+             LinkedIn
+        </SocialPill>
+
+        <SocialPill target="_blank" href="https://wa.me/+584149456997">
+            <WhatsappIcon class="size-8" />
+             WhatsApp
+        </SocialPill>
+        <SocialPill
+            href="mailto:angeljurrut@gmail.com?Subject=Interesado%20en%20en%20trabajar%20juntos%20en%20un%20proyecto"
+        >
+            <EmailIcon class="size-8" />
+             Email
+        </SocialPill>
+    </div>
+</div>

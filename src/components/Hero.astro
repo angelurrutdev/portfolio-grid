@@ -12,13 +12,14 @@ import SocialPill from "../components/SocialPill.astro";
         class="row-span-2 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden gap-10 justify-end p-6 xl:col-span-4 lg:items-end sm:flex-row lg:p-10"
     >
         <div
-            class="absolute bg-gradient-to-t from-dusky-alt to-transparent top-0 left-0 bottom-0 right-0 z-[2]"
+            class="absolute bg-gradient-to-t from-dusky-alt to-transparent top-0 left-0 bottom-0 right-0 z-[1]"
         >
-        </div><img
-            class="absolute w-full h-full object-cover left-0 top-0"
+        </div>
+        <img
+            class="absolute size-full object-cover left-0 top-0 bg-white dark:bg-raisin-black"
             src="/IMG_0659.webp"
-            alt="personal"
-            title="Personal"
+            alt={personalImageAlt}
+            title={personalImageAlt}
         /><div
             class="w-full flex flex-col z-[2] absolute left-0 bottom-0 leading-4 p-5 text-moonlit"
         >
@@ -46,14 +47,15 @@ import SocialPill from "../components/SocialPill.astro";
                 </SocialPill>
             </div>
         </div>
-    </div><div
+    </div>
+    <div
         class="row-span-1 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 p-7 dark:bg-raisin-black xl:col-span-2 lg:p-7"
         style="opacity: 1; transform: none;"
     >
         <h2 class="text-2xl font-bold z-[1]">Sobre mi</h2>
         <p class="text-base w-full z-[1] opacity-70">
             Desarollador Web con experiencia en el diseño, desarollando y
-            manteniendo aplicaciones web
+            manteniendo aplicaciones web.
         </p>
     </div>
     <div
@@ -83,11 +85,6 @@ import SocialPill from "../components/SocialPill.astro";
         class="row-span-1 col-span-3 rounded-3xl bg-white dark:bg-raisin-black overflow-hidden border-2 border-transparent xl:col-span-1 flex items-center justify-center relative"
     >
         <img
-            class="absolute size-full object-cover z-[1]"
-            src="/assets/white_map-CRh8bOMc.webp"
-            alt="Location"
-            title="Location"
-        /><img
             class="w-8 z-[2]"
             src="/angelurrut.webp"
             alt="memoji"

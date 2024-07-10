@@ -1,19 +1,18 @@
 ---
 import AboutMe from "../components/AboutMe.astro";
-import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 import Experience from "../components/Experience.astro";
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import ProfileShare from "../components/icons/ProfileShare.astro";
 import TrendingUpIcon from "../components/icons/trendingup.astro";
-import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
-import EmailForwadIcon from "../components/icons/EmailForwad.astro";
-import Contact from "../components/Contact.astro";
+import ContactWork from "../components/SectionWork.astro";
 import InfinityScroll from "../components/InfinityScroll";
 import Proyectos from "../components/Proyectos.astro";
+import SectionContainerTitle from "../components/SectionContainerTitle.astro";
 ---
 
 <Layout
@@ -21,54 +20,35 @@ import Proyectos from "../components/Proyectos.astro";
 	description="Contrata a Angel Urrutia para crear tu pagina web o app movil Desarollador web Programador Web Especializado"
 >
 	<main
+		id="inicio"
 		class="w-full flex flex-col gap-10 items-center max-w-5xl px-5 xl:max-w-6xl mt-[5.5rem]"
 	>
 		<Hero />
 
-		<h2
-			class="flex items-center justify-center mb-6 text-4xl font-bold gap-x-3 text-black/80 dark:text-white"
-		>
-			<CodeIcon class="size-8 mt-2" />
+		<SectionContainerTitle id="proyectos">
+			<CodeIcon class="size-8" />
 			 Proyectos
-		</h2>
-
+		</SectionContainerTitle>
 		<Proyectos />
 
-		<SectionContainer class="w-full mt-9" id="proyectos">
-			<!-- <Projects /> -->
+		<SectionContainer>
+			<ContactWork />
 		</SectionContainer>
 
 		<SectionContainer id="Skills" class="mt-20">
-			<h2
-				class="flex items-center justify-center mb-6 text-4xl font-bold gap-x-3 text-black/80 dark:text-white pt-6"
-				class="size-8 mt-2"
-			>
-				<TrendingUpIcon />
+			<SectionContainerTitle>
+				<TrendingUpIcon class="size-8 mt-2" />
 				 Skills
-			</h2>
+			</SectionContainerTitle>
 			<InfinityScroll />
 		</SectionContainer>
 
 		<SectionContainer id="sobre-mi" class="mt-20">
-			<h2
-				class="flex items-center justify-center mb-6 text-4xl font-bold gap-x-3 text-black/80 dark:text-white pt-6"
-			>
+			<SectionContainerTitle>
 				<ProfileShare class="size-8 mt-1" />
 				 Sobre Mí
-			</h2>
-
+			</SectionContainerTitle>
 			<AboutMe />
-		</SectionContainer>
-
-		<SectionContainer id="contacto">
-			<h2
-				class="flex items-center justify-center mb-6 text-4xl font-bold gap-x-3 text-black/80 dark:text-white pt-6"
-			>
-				<EmailForwadIcon class="size-8 mt-2" />
-				 Contacto
-			</h2>
-
-			<Contact />
 		</SectionContainer>
 
 		<SectionContainer>
