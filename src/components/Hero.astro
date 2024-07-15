@@ -1,5 +1,6 @@
 ---
 const personalImageAlt = "Angel Urrutia";
+
 import Badge from "../components/Badge.astro";
 import EmailIcon from "../components/icons/Email.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
@@ -9,7 +10,7 @@ import SocialPill from "../components/SocialPill.astro";
 
 <section class="w-full grid auto-rows-[172px] grid-cols-6 gap-4">
     <div
-        class="row-span-2 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden gap-10 justify-end p-6 xl:col-span-4 lg:items-end sm:flex-row lg:p-10"
+        class="row-span-2 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden gap-10 justify-end p-6 xl:col-span-4 lg:items-end sm:flex-row lg:p-10 animate-fade-down animate-once animate-duration-[530ms]"
     >
         <div
             class="absolute bg-gradient-to-t from-dusky-alt to-transparent top-0 left-0 bottom-0 right-0 z-[1]"
@@ -20,7 +21,8 @@ import SocialPill from "../components/SocialPill.astro";
             src="/IMG_0659.webp"
             alt={personalImageAlt}
             title={personalImageAlt}
-        /><div
+        />
+        <div
             class="w-full flex flex-col z-[2] absolute left-0 bottom-0 leading-4 p-5 text-moonlit"
         >
             <span class="text-3xl font-bold leading-7">Angel Urrutia</span><span
@@ -48,8 +50,9 @@ import SocialPill from "../components/SocialPill.astro";
             </div>
         </div>
     </div>
+
     <div
-        class="row-span-1 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 p-7 dark:bg-raisin-black xl:col-span-2 lg:p-7"
+        class="row-span-1 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 p-7 dark:bg-raisin-black xl:col-span-2 lg:p-7 animate-fade-down animate-once animate-duration-[530ms] animate-delay-[150ms]"
         style="opacity: 1; transform: none;"
     >
         <h2 class="text-2xl font-bold z-[1]">Sobre mi</h2>
@@ -59,7 +62,7 @@ import SocialPill from "../components/SocialPill.astro";
         </p>
     </div>
     <div
-        class="row-span-1 col-span-3 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 items-center justify-center dark:bg-raisin-black xl:col-span-1"
+        class="row-span-1 col-span-3 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 items-center justify-center dark:bg-raisin-black xl:col-span-1 animate-fade-down animate-once animate-duration-[550ms] animate-delay-130"
     >
         <p class="text-7xl z-[1] font-bold flex items-center gap-1">
             <span>+</span><span>1</span>
@@ -82,11 +85,11 @@ import SocialPill from "../components/SocialPill.astro";
         >
     </div>
     <div
-        class="row-span-1 col-span-3 rounded-3xl bg-white dark:bg-raisin-black overflow-hidden border-2 border-transparent xl:col-span-1 flex items-center justify-center relative"
+        class="row-span-1 col-span-3 rounded-3xl bg-white dark:bg-raisin-black overflow-hidden border-2 border-transparent xl:col-span-1 flex items-center justify-center relative animate-fade-down animate-once animate-duration-[550ms] animate-delay-330"
     >
         <img
             class="w-8 z-[2]"
-            src="/angelurrut.webp"
+            src="/favicon.svg"
             alt="memoji"
             title="memoji"
         /><div
