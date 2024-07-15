@@ -1,8 +1,6 @@
 import { v4 as uuid } from 'uuid'
 
-import {
-	IDevToolsElement,
-} from './InfinityScroll'
+import { IDevToolsElement } from './InfinityScroll'
 
 
 
@@ -45,9 +43,3 @@ export const DevTools: IDevToolsElement[] = [
 		icon: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg',
 	},
 ]
-
-/* {
-		id: uuid(),
-		name: 'TypeScript',
-		icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-	}, */
