@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid'
 
-import { IDevToolsElement } from './InfinityScroll'
+import type { IDevToolsElement } from './InfinityScroll'
 
 
 
