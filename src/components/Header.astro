@@ -40,12 +40,14 @@ const navItems = [
             ))
         }
         <a
-            class="w-auto h-7 font-medium flex pr-3 items-center gap-2 dark:text-moonlit hover:text-yellow-500 dark:hover:text-yellow-400 rounded-3xl lg:h-10 cursor-pointer active:scale-[1.1] transition-transform duration-300"
+            class="w-auto h-7 pr-2 font-medium text-gray-600 flex items-center gap-2 rounded-3xl dark:text-gray-200 lg:px-1 cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-400 transition-transform duration-300"
             href={Curriculum}
             target="_blank"
-            ><svg
-                class="sm:hidden block"
+        >
+            <svg
+                {...Astro.props}
                 stroke="currentColor"
+                class="flex lg:hidden"
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 24 24"
@@ -59,9 +61,10 @@ const navItems = [
                 ></path></svg
             >
             <div class="flex items-center">
-                <span class="hidden lg:flex">Ver &nbsp;</span><span>CV</span>
-            </div></a
-        >
+                <span class="hidden sm:flex">Ver &nbsp;</span>
+                <span>CV</span>
+            </div>
+        </a>
         <ThemeToggle />
     </nav>
 </header>
