@@ -1,0 +1,56 @@
+{
+  "about-section": {
+    "title": "About",
+    "description": "Web developer with experience in designing, developing and maintaining front-end web applications."
+  },
+  "experience-box": {
+    "title": "Years of experience"
+  },
+  "location-box" : {
+    "title": "From, Venezuela"
+  },
+  "resume-box": {
+    "title": "Download"
+  },
+  "projects-section": {
+    "title": "Projects",
+    "description": "Here are some projects I've worked on in the past one years.",
+    "work-experience": "Work Experience",
+    "personal-experience": "Personal Experience",
+    "projects" : {
+      "Spotify": "Spotify Clone Using View Transitions API",
+      "GuideGit": "A short guide to Git and GitHub commands"
+    },
+    "new-label": "New project"
+  },
+  "technologies-section": {
+    "title": "Technologies",
+    "description": "These are some of the technologies I've worked with:"
+  },
+  "experience-section": {
+    "title": "Experience",
+    "description": "I have worked for the following companies:",
+    "companies": {
+        "promass": {
+            "dates": "Feb. 2024 — Present"
+        },
+      "DD360": {
+        "dates": "Jul. 2022 — Nov. 2023"
+      },
+      "nolab": {
+        "dates":  "Feb. 2022 — Jul. 2022"
+      },
+      "esperanza": {
+        "dates":  "Nov. 2021 — Feb. 2022"
+      },
+      "bwl": {
+        "dates":  "Jan. 2021 — Nov. 2021"
+      }
+    }
+  },
+  "others-translations": {
+    "degree": "Front-end Developer",
+    "visit": "Visit",
+    "last-update": "Last update: August 30, 2024"
+  }
+}
