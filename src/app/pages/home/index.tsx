@@ -6,7 +6,8 @@ import Footer from '@/app/theme/components/Footer/Footer.tsx'
 import HeroSection from '@/app/theme/components/Sections/HeroSection'
 import ExperienceSection from '@/app/theme/components/Sections/ExperienceSection'
 import ToolsSection from '@/app/theme/components/Sections/ToolsSection'
-import PositionsSection from '@/app/theme/components/Sections/PositionsSection'
+
+
 
 const Home = () => {
 	const { t } = useTranslation('global')
