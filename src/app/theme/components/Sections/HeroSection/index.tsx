@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 import personal from '@/assets/IMG_0659.webp'
 import whiteMap from '@/assets/white_map.webp'
 import darkMap from '@/assets/dark_map.webp'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo.webp'
 
 
 const personalImageAlt = "Angel Urrutia";

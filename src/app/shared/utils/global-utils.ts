@@ -14,10 +14,12 @@ import esperanza_bg from '@/assets/esperanza_bg.webp'
 import esperanza from '@/assets/esperanza.webp'
 import bwl_bg from '@/assets/bwl_bg.webp'
 import bwl from '@/assets/bwl.svg'
-import Spotify from '@/assets/Spotify.webp'
-import GuideGit from '@/assets/GuideGit.webp'
 import protec from '@/assets/protec.webp'
 import gpmass_bg from '@/assets/gpmass.webp'
+
+
+import Spotify from '@/assets/Spotify.webp'
+import GuideGit from '@/assets/GuideGit.webp'
 
 export const projects: IProjectCard[] = [
 
@@ -37,7 +39,7 @@ export const projects: IProjectCard[] = [
 		project_name: 'Guìa Git y GitHub',
 		description: 'projects-section.projects.GuideGit',
 		screenShot: GuideGit,
-		demoLink: 'https://profesionalurbano.com/',
+		demoLink: 'https://git-github-guia.vercel.app/',
 		className: 'lg:row-span-3 xl:col-span-4',
 		isPrivate: true,
 		index: 2,
