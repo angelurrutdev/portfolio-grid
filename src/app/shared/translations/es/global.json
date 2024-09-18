@@ -19,7 +19,8 @@
     "personal-experience": "Experiencia personal",
     "projects" : {
       "Spotify": "Clon de Spotify Utilizando la API de View Transitions",
-      "GuideGit": "Pequeña guia de comandos de Git y GitHub"
+      "GuideGit": "Pequeña guia de comandos de Git y GitHub",
+      "PasswordGenerator": "Generador de contraseñas seguras y únicas"
     },
     "new-label": "Nuevo proyecto"
   },

@@ -20,6 +20,8 @@ import gpmass_bg from '@/assets/gpmass.webp'
 
 import Spotify from '@/assets/Spotify.webp'
 import GuideGit from '@/assets/GuideGit.webp'
+import PassImage from '@/assets/PassImage.webp'
+
 
 export const projects: IProjectCard[] = [
 
@@ -36,7 +38,7 @@ export const projects: IProjectCard[] = [
 	},
 	{
 		id: uuid(),
-		project_name: 'Guìa Git y GitHub',
+		project_name: 'Guía Git y GitHub',
 		description: 'projects-section.projects.GuideGit',
 		screenShot: GuideGit,
 		demoLink: 'https://git-github-guia.vercel.app/',
@@ -44,6 +46,18 @@ export const projects: IProjectCard[] = [
 		isPrivate: true,
 		index: 2,
 		technologies: ['Astro 4', 'Tailwind CSS', 'JavaScript'],
+	},
+	{
+		id: uuid(),
+		project_name: 'Creador de Contraseñas',
+		description: 'projects-section.projects.PasswordGenerator',
+		screenShot: PassImage,
+		demoLink: 'https://generator-password-five.vercel.app/',
+		github: 'https://generator-password-five.vercel.app/',
+		className: 'lg:row-span-3 xl:col-span-4',
+		isPrivate: true,
+		index: 3,
+		technologies: ['HTML', 'CSS', 'JavaScript'],
 	},
 ]
 

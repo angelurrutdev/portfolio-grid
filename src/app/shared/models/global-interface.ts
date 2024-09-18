@@ -17,6 +17,7 @@ export interface IProjectCard {
 	screenShot?: string
 	isPrivate?: boolean
 	demoLink?: string
+	github?: string
 	className?: string
 	newProject?: boolean
 }

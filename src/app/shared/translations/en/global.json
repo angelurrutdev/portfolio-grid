@@ -1,7 +1,7 @@
 {
   "about-section": {
     "title": "About",
-    "description": "Web developer with experience in designing, developing and maintaining front-end web applications."
+    "description": "Software developer focused on professional growth, I seek to create effective and high quality solutions."
   },
   "experience-box": {
     "title": "Years of experience"
@@ -19,7 +19,8 @@
     "personal-experience": "Personal Experience",
     "projects" : {
       "Spotify": "Spotify Clone Using View Transitions API",
-      "GuideGit": "A short guide to Git and GitHub commands"
+      "GuideGit": "A short guide to Git and GitHub commands",
+      "PasswordGenerator": "Generator of secure and unique passwords"
     },
     "new-label": "New project"
   },

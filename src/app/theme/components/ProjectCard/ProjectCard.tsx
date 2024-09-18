@@ -4,6 +4,7 @@ import { useHover, useMediaQuery } from '@uidotdev/usehooks'
 import { motion } from 'framer-motion'
 import { ImStack } from 'react-icons/im'
 import { MdArrowOutward } from 'react-icons/md'
+import { FaGithub } from 'react-icons/fa6'
 import { FaFire } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 
@@ -15,6 +16,7 @@ const ProjectCard: FC<IProjectCard> = ({
 	technologies,
 	screenShot,
 	demoLink,
+	github,
 	className,
 	isPrivate = false,
 	newProject = false,
@@ -54,7 +56,19 @@ const ProjectCard: FC<IProjectCard> = ({
 						{t('projects-section.new-label')}
 					</div>
 				)}
-				{demoLink && (
+
+					{github && (
+					<a
+					className='p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-20 lg:top-8 lg:right-20 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 z-[1]'
+					href={demoLink}
+					target='_blank'
+					rel='noreferrer'
+					title={`${project_name} Repository`}
+				>
+					<FaGithub/>
+				</a>
+				)}
+					{demoLink && (
 					<a
 						className='p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-6 lg:top-8 lg:right-8 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 z-[1]'
 						href={demoLink}
