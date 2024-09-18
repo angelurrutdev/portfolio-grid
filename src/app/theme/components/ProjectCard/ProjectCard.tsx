@@ -60,7 +60,7 @@ const ProjectCard: FC<IProjectCard> = ({
 					{github && (
 					<a
 					className='p-2 border-2 border-dusky dark:border-moonlit opacity-40 rounded-full absolute top-6 right-20 lg:top-8 lg:right-20 cursor-pointer hover:bg-dusky hover:text-white dark:hover:bg-moonlit dark:hover:text-dusky transition-colors duration-150 z-[1]'
-					href={demoLink}
+					href={github}
 					target='_blank'
 					rel='noreferrer'
 					title={`${project_name} Repository`}
